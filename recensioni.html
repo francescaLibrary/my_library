@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutte le recensioni dei libri letti - Pagine e Parole">
+    <title>Recensioni - Pagine e Parole</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body data-page="recensioni">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-header-title">📖 Recensioni</h1>
+            <p class="page-header-subtitle">Tutti i libri che ho letto e amato (o meno)</p>
+        </div>
+    </header>
+    
+    <!-- Filters & Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Genere</label>
+                        <select class="filter-select" id="filter-genre">
+                            <option value="">Tutti i generi</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Voto</label>
+                        <select class="filter-select" id="filter-rating">
+                            <option value="">Tutti i voti</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Anno</label>
+                        <select class="filter-select" id="filter-year">
+                            <option value="">Tutti gli anni</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group filter-search">
+                        <label class="filter-label">Cerca</label>
+                        <input type="text" id="filter-search" placeholder="Titolo o autore...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Info -->
+            <div class="results-info">
+                <span class="results-count" id="results-count">Caricamento...</span>
+                <div class="results-sort">
+                    <label for="filter-sort">Ordina per:</label>
+                    <select class="filter-select" id="filter-sort">
+                        <option value="date-desc">Più recenti</option>
+                        <option value="date-asc">Meno recenti</option>
+                        <option value="rating-desc">Voto (decrescente)</option>
+                        <option value="rating-asc">Voto (crescente)</option>
+                        <option value="title-asc">Titolo (A-Z)</option>
+                        <option value="title-desc">Titolo (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Books Grid -->
+            <div class="book-grid" id="books-grid">
+                <div class="loading">Caricamento libri...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+    <!-- JavaScript -->
+    <script src="js/data-loader.js"></script>
+    <script src="js/template-renderer.js"></script>
+    <script src="js/component-loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

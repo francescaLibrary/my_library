@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chi sono - Scopri di più sulla blogger dietro Pagine e Parole">
+    <title>Chi Sono - Pagine e Parole</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body data-page="chi-sono">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-grid">
+                <div>
+                    <img src="assets/images/profile.jpg" 
+                         alt="Foto profilo" 
+                         class="about-photo"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="about-photo-placeholder" style="display: none;">👩‍💼</div>
+                </div>
+                <div class="about-intro">
+                    <h1 id="about-name">Maria</h1>
+                    <p class="about-role" id="about-role">Lettrice Appassionata</p>
+                    <p class="about-bio" id="about-bio">
+                        Da sempre innamorata delle storie...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Extended Bio -->
+    <section class="about-section bg-cream">
+        <div class="container container-narrow">
+            <p class="about-bio text-center" id="about-bio-extended" style="font-size: 1.125rem; line-height: 1.9;">
+                La mia passione per la lettura...
+            </p>
+        </div>
+    </section>
+    
+    <!-- Reading Goal -->
+    <section class="about-section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📖 Obiettivo di Lettura</h2>
+                <p class="section-subtitle">Il mio traguardo per quest'anno</p>
+            </div>
+            <div id="reading-goal">
+                <div class="loading">Caricamento...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats -->
+    <section class="about-section bg-cream">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📊 I Miei Numeri</h2>
+                <p class="section-subtitle">Un po' di statistiche sulla mia lettura</p>
+            </div>
+            <div class="stats-grid" id="about-stats">
+                <div class="loading">Caricamento statistiche...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Favorite Genres -->
+    <section class="about-section bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">💕 I Miei Generi Preferiti</h2>
+                <p class="section-subtitle">Dove il mio cuore di lettrice batte più forte</p>
+            </div>
+            <div class="genres-grid" id="favorite-genres">
+                <div class="loading">Caricamento generi...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Fun Facts -->
+    <section class="about-section bg-cream">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">✨ Curiosità su di Me</h2>
+                <p class="section-subtitle">Piccoli dettagli dalle mie sessioni di lettura</p>
+            </div>
+            <div class="fun-facts-grid" id="fun-facts">
+                <div class="loading">Caricamento...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contatti">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📬 Contattami</h2>
+                <p class="section-subtitle">Parliamo di libri insieme!</p>
+            </div>
+            <div class="contact-grid" id="contact-cards">
+                <div class="loading">Caricamento contatti...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+    <!-- JavaScript -->
+    <script src="js/data-loader.js"></script>
+    <script src="js/template-renderer.js"></script>
+    <script src="js/component-loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

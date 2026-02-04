@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La mia libreria virtuale - Tutte le copertine dei libri letti">
+    <title>Libreria - Pagine e Parole</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body data-page="libreria">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-header-title">📚 La Mia Libreria</h1>
+            <p class="page-header-subtitle">
+                <span id="library-count">0</span> libri letti e catalogati
+            </p>
+        </div>
+    </header>
+    
+    <!-- Library Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="library-grid" id="library-grid">
+                <div class="loading">Caricamento libreria...</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div id="footer"></div>
+    
+    <!-- JavaScript -->
+    <script src="js/data-loader.js"></script>
+    <script src="js/template-renderer.js"></script>
+    <script src="js/component-loader.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
