@@ -1,0 +1,147 @@
+/**
+ * Navigation Styles - Pagine e Parole
+ */
+
+/* Navbar */
+.navbar {
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+}
+
+.nav-logo-icon {
+    font-size: 1.75rem;
+}
+
+.nav-logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-logo:hover .nav-logo-text {
+    color: var(--primary-dark);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-sm) 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: var(--transition);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        flex-direction: column;
+        padding: var(--space-lg);
+        gap: var(--space-md);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: var(--space-md);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link.active,
+    .nav-link:hover {
+        background: var(--bg-secondary);
+        border-radius: var(--radius);
+    }
+}
