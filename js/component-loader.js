@@ -89,14 +89,29 @@ class ComponentLoader {
 
         if (toggle && links) {
             toggle.addEventListener('click', () => {
-                links.classList.toggle('active');
+                const isOpen = links.classList.toggle('active');
+                // Animate hamburger → X
+                toggle.classList.toggle('open', isOpen);
+                // Accessibility
+                toggle.setAttribute('aria-expanded', isOpen);
             });
 
             // Close menu when clicking a link
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     links.classList.remove('active');
+                    toggle.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
                 });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !links.contains(e.target)) {
+                    links.classList.remove('active');
+                    toggle.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
             });
         }
     }
